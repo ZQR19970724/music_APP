@@ -1,0 +1,86 @@
+
+.song-list{
+    padding: 0 0.12rem;
+    width: 100%;
+    /*border: red solid 1px;*/
+    box-sizing: border-box;
+}
+.song-list > nav{
+    padding: 0.14rem 0 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.song-list > nav > a > img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.song-list > nav > a > p{
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+.search{
+    width: 100%;
+    margin-top: 0.1rem;
+    font-size: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.search>img:first-of-type{
+    width: 0.225rem;
+    height: 0.19rem;
+    margin-right: 0.08rem;
+}
+.search>a>input{
+    width: 3.5rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    font-size: 0.12rem;
+    border-radius: 0.25rem;
+    text-indent: 0.53rem;
+    border: none;
+    outline: none;
+    background:url("../img/search/icon-3@2x.png") no-repeat 0.165rem 0.07rem rgb(88,90,101);
+    background-size: 0.22rem 0.22rem;
+}
+.search>img:last-of-type{
+    width: 0.25rem;
+    height: 0.23rem;
+    margin-left: 0.07rem;
+}
+.nape{
+    margin-top: 0.12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.list{
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    margin-top: 0.12rem;
+    /*display: flex;*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.1rem;
+
+}
+.right span{
+    color: #f1f1f1;
+    display: block;
+    margin-top: 0.2rem;
+}
+.left img{
+    margin-top: 0.11em;
+}
+
+.right{
+    width: 4.15rem;
+    height: 0.9rem;
+    margin-left: 10px;
+}

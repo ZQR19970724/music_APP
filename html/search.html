@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,minimum-scale=1.0">
+    <link rel="shortcut icon" href="https://imgessl.kugou.com/uploadpic/softhead/240/20190520/20190520193625210.jpg">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+<header>
+    <div class="status">
+            <img src="../img/MV/首页状态栏@2x.png" alt="">
+    </div>
+</header>
+<section>
+    <div class="search">
+        <a href="javascript:history.go(-1)"><img src="../img/ranklist/icon-2@2x.png" alt=""></a>
+        <input type="text" placeholder="搜索">
+        <a>取消</a>
+    </div>
+</section>
+<section>
+    <!--热门搜索-->
+    <div class="hot-search">
+        <p>热门搜索</p>
+
+    </div>
+    <ul class="search-nape">
+        <li>成都</li>
+        <li>像鱼</li>
+        <li>下雨了</li>
+        <li>多想在平庸的世界拥抱你</li>
+    </ul>
+    <ul class="search-nape">
+        <li>薛之谦</li>
+        <li>陈奕迅</li>
+    </ul>
+    <ul class="search-nape">
+        <li>今朝</li>
+        <li>像鱼</li>
+        <li>木偶人</li>
+        <li>多想大声说爱你</li>
+    </ul>
+    <!--搜索记录-->
+    <div class="hot-search">
+    <p>搜索记录</p>
+        <div class="remove"><img src="../img/search/icon_2@2x.png" alt=""></div>
+    </div>
+    <ul class="search-nape">
+        <li>心太软</li>
+        <li>稻香</li>
+        <li>遇见</li>
+        <li>沧海一声笑肖战王一博版</li>
+    </ul>
+    <ul class="search-nape">
+        <li>绿色</li>
+        <li>我的梦</li>
+        <li>再见</li>
+    </ul>
+    <ul class="search-nape">
+        <li>想象</li>
+        <li>燕归巢</li>
+    </ul>
+</section>
+<div class="footer">
+    <img src="../img/search/jianpan_1@2x.png" alt="">
+</div>
+</body>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/fontsize.js"></script>
+<script src="../js/jquery.min.js"></script>
+
+<script>
+        $("#music").focus(function () {
+            $(".footer").css("display", "none");
+        })
+    
+        // $.ajaxPrefilter(function (options) {
+        //     if (options.crossDomain && jQuery.support.cors) {
+        //         var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+        //         options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+        //     }
+        // });
+    
+    
+        // var datas;
+    //     $("#music").blur(function () {
+    //         $.ajax({
+    //             url: "http://mobilecdn.kugou.com/api/v3/search/song",
+    //             type: "get",
+    //             data: {
+    //                 format: 'json',
+    //                 keyword: $("input").val(),
+    //                 page: 1,
+    //                 pagesize: 10,
+    //                 showtype: 1
+    //             },
+    //             dataType: "json",
+    //             beforeSend: function () {
+    //                 setTimeout(function () {
+    //                     $(".box").css("display", "block");
+    //                 }, 500)
+    //             },
+    //             success: function (datalist) {
+    //                 $(".box").css("display", "none");
+    //                 datas = datalist.data.info;
+    //                 // console.log(datas);
+    //                 var str1 = "";
+    //                 var songsname = "";
+    //                 for (var i = 0; i < datas.length; i++) {
+    //                     if (datas[i].songname.length > 10) {
+    //                         songsname = datas[i].songname.substr(0, 10) + ".....";
+    //                     } else {
+    //                         songsname = datas[i].songname;
+    //                     }
+    //                     str1 += '<li><span>' + songsname + '</span><span>' + datas[i].singername + '</span></li>';
+    //                 }
+    //                 $('.list').html(str1);
+    //             }
+    //         })
+    //     })
+    
+    // var arr=[];
+    
+        // $(".list").on("click","li",function () {
+        //     $.ajax({
+        //         url: "http://m.kugou.com/app/i/getSongInfo.php",
+        //         type:'get',
+        //         data: {
+        //             cmd:'playInfo',
+        //             hash:datas[$(this).index()].hash,
+        //         },
+        //         dataType: 'json',
+        //         success:function(data){
+        //             console.log(data);
+        //           arr.push({
+        //              sing:data.singerName,
+        //              song: data.songName,
+        //              pic_url:data.imgUrl.replace("/{size}",""),
+        //              url:data.url,
+        //           })
+        //            localStorage.setItem("list",JSON.stringify(arr));
+        //            location.href="../html/music_play.html";
+        //         }
+        //     })
+          
+        // })
+    
+        $("#music").blur(function () {
+            $.ajax({
+                url: 'https://v1.itooi.cn/netease/search?keyword='+$("input").val()+'&type=song&pageSize=20&page=0',
+                success:function(data){
+                    console.log(data.data);
+                    console.log(data.data.songs[0].id);
+                    let num=[];
+                    for(let i = 0;i<data.data.songs.length;i++){
+                        num[i]=data.data.songs[i].id;
+                    }
+                    console.log(num)
+                   localStorage.setItem("list",JSON.stringify(num));
+                }
+    
+            })
+          
+        })
+    
+    
+    </script>
+</html>

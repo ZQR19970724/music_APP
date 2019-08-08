@@ -1,0 +1,115 @@
+.song-list{
+    padding: 0 0.12rem;
+    width: 100%;
+    /*border: red solid 1px;*/
+    box-sizing: border-box;
+}
+.song-list > nav{
+    padding: 0.14rem 0 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.song-list > nav > a > img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.song-list > nav > a > p{
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+.search{
+    height: 0.32rem;
+    width: 100%;
+    margin-top: 0.1rem;
+    font-size: 0rem;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    /* align-items: center; */
+}
+/* .search>img:first-of-type{
+    width: 0.225rem;
+    height: 0.19rem;
+    margin-right: 0.08rem;
+} */
+.search>a>img{
+    width: 0.08rem;
+    height: 0.14rem;
+}
+.search>a{
+    line-height: 0.32rem;
+    font-size: 0.15rem;
+    font-family: "苹方";
+    color:#dbdbdb;
+    /*padding: 0px 0px 0px 0px;*/
+    /* margin-left:-0.2rem; */
+}
+.search>input{
+    width: 2.9rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    font-size: 0.12rem;
+    border-radius: 0.25rem;
+    text-indent: 0.53rem;
+    color: #f1f1f1;
+    border: none;
+    outline: none;
+    background:url("../img/search/icon-3@2x.png") no-repeat 0.165rem 0.07rem rgb(88,90,101);
+    background-size: 0.22rem 0.22rem;
+}
+.search>img:last-of-type{
+    width: 0.25rem;
+    height: 0.23rem;
+    margin-left: 0.07rem;
+}
+.hot-search{
+    font-family: 苹方;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.1rem 0.12rem 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 0.15rem;
+    color: #f1f1f1;
+}
+.search-nape{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.08rem 0.1rem;
+}
+.search-nape li{
+    margin-left: 0.04rem;
+    height: 0.15rem;
+    font-size: 0.12rem;
+    background: #e1e1e1;
+    color:#1b1d2e;
+    padding: 0.02rem 0.04rem;
+    border-radius: 0.05rem;
+    line-height: 0.15rem;
+}
+.remove{
+    width: 0.145rem;
+    height: 0.145rem;
+}
+.remove>img{
+    width: 0.145rem;
+    height: 0.145rem;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*font-size: 0.15rem;*/
+}
+.footer>img{
+    width: 100%;
+}

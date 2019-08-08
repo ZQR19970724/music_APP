@@ -1,0 +1,74 @@
+.content {
+    background: url("../img/map/bg_1@2x.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    font-size: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+.content>.attend_nav {
+    display: flex; 
+    justify-content: center;
+}
+.content>.attend_nav>a {
+    margin-top: 0.12rem;
+    display: block;
+}
+.content>.attend_nav>a>img {
+    width: 0.71rem;
+    height: 0.22rem;
+}
+.content>.img{
+    margin-left: 1.54rem;
+    margin-top: 2.05rem;
+    width: 0.91rem;
+    height: 0.91rem;
+}
+.content>.img_1{
+    margin-left: 1.4rem;
+    margin-top: 1.165rem;
+    width: 0.64rem;
+    height: 0.64rem;
+    
+}
+.content>.attend_bottom{
+    width: 100%;
+    overflow: hidden;
+    /* display: flex; */
+    padding-bottom: 0.1rem;
+}
+.content>.attend_bottom>.left_box{
+    width: 120%;
+    display: flex;
+}
+.content>.attend_bottom>.left_box>.left{
+    width: 2.25rem;
+    height: 1.15rem;
+    border-radius: 0.1rem;
+    margin-top:  0.15rem;
+    margin-left: 0.16rem;
+    background: #1b1e2d;
+    display: flex;
+    align-items: center;
+}
+.content>.attend_bottom>.left_box>.left>img{
+    margin-left: 0.025rem;
+    width: 0.71rem;
+    height: 0.71rem;
+}
+.content>.attend_bottom>.left_box>.left>.left-text{
+    margin-left: 0.04rem;
+}
+.content>.attend_bottom>.left_box>.left>.left-text>p{
+    font-family: "苹方粗体";
+    font-size: 0.24rem;
+    color: #e1e1e1;
+}
+.content>.attend_bottom>.left_box>.left>.left-text>span{
+    display: block;
+    padding: 0.06rem 0;
+    font-family: "苹方粗体";
+    font-size: 0.11rem;
+    color: #e1e1e1;
+}

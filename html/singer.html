@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>歌手</title>
+    <link rel="shortcut icon" href="https://imgessl.kugou.com/uploadpic/softhead/240/20190520/20190520193625210.jpg">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/singer.css">
+</head>
+
+<body>
+    <div class="status"><img src="../img/MV/首页状态栏@2x.png" alt=""></div>
+    <div class="content">
+            <nav>
+                    <a href="javascript:history.go(-1)"><img src="../img/MV/nav_icon_1@2x.png" alt=""></a>
+                    <a href="#">
+                        <p>歌手</p>
+                    </a>
+                    <a href="../html/search.html"><img src="../img/singer/nav_icon_2@2x.png"></a>
+                </nav>
+                <div class="all">
+                    <ul class="area_list">
+                        <li><a href="#"><p>全部</p></a></li>
+                        <li><a href="#"><p>港台</p></a></li>
+                        <li><a href="#"><p>内地</p></a></li>
+                        <li><a href="#"><span>欧美</span></a></li>
+                        <li><a href="#"><span>韩国</span></a></li>
+                        <li><a href="#"><span>其他</span></a></li>
+                    </ul>
+                    <ul class="set_list">
+                        <li><a href="#"><p>全部</p></a></li>
+                        <li><a href="#"><p>男</p></a></li>
+                        <li><a href="#"><p>女</p></a></li>
+                        <li><a href="#"><p>组合</p></a></li>
+                    </ul>
+                    <div class="classsify_list_box">
+                            <a href="#"><p>全部</p></a>
+                        <div class="classify_list">
+                                <ul>
+                                        <li><a href="#"><p>流行</p></a></li>
+                                        <li><a href="#"><p>嘻哈</p></a></li>
+                                        <li><a href="#"><p>摇滚</p></a></li>
+                                        <li><a href="#"><p>电子</p></a></li>
+                                        <li><a href="#"><p>民谣</p></a></li>
+                                        <li><a href="#"><p>R&B</p></a></li>
+                                        <li><a href="#"><p>民歌</p></a></li>
+                                        <li><a href="#"><p>流行</p></a></li>
+                                        <li><a href="#"><p>嘻哈</p></a></li>
+                                        <li><a href="#"><p>其他</p></a></li>
+                                </ul>
+                        </div>
+                </div>
+                </div>
+              <div class="main">
+                  <a href="#"><p>热门排行</p></a>
+                  <ul class="play_list">
+                      <li>
+                          <div class="play_list_box">
+                                <a href="#"><img src="../img/singer/img_1@2x.png" alt=""></a>
+                                <a href="#"><p>G.E.M.邓紫棋</p></a>
+                          </div>
+                          <a href="#"><img src="../img/singer/icon_1@2x.png" alt=""></a>
+                      </li>
+                      <li>
+                            <div class="play_list_box">
+                                  <a href="#"><img src="../img/singer/img_2@2x.png" alt=""></a>
+                                  <a href="#"><p>薛之谦</p></a>
+                            </div>
+                            <a href="#"><img src="../img/singer/icon_1@2x.png" alt=""></a>
+                        </li>
+                      <li>
+                            <div class="play_list_box">
+                                  <a href="#"><img src="../img/singer/img_3@2x.png" alt=""></a>
+                                  <a href="#"><p>周杰伦</p></a>
+                            </div>
+                            <a href="#"><img src="../img/singer/icon_1@2x.png" alt=""></a>
+                        </li>
+                      <li>
+                            <div class="play_list_box">
+                                  <a href="#"><img src="../img/singer/img_4@2x.png" alt=""></a>
+                                  <a href="#"><p>陈雪凝</p></a>
+                            </div>
+                            <a href="#"><img src="../img/singer/icon_1@2x.png" alt=""></a>
+                        </li>
+                      <li>
+                            <div class="play_list_box">
+                                  <a href="#"><img src="../img/singer/img_5@2x.png" alt=""></a>
+                                  <a href="#"><p>王力宏</p></a>
+                            </div>
+                            <a href="#"><img src="../img/singer/icon_1@2x.png" alt=""></a>
+                        </li>
+                      <li>
+                            <div class="play_list_box">
+                                  <a href="#"><img src="../img/singer/img_6@2x.png" alt=""></a>
+                                  <a href="#"><p>林俊杰</p></a>
+                            </div>
+                            <a href="#"><img src="../img/singer/icon_1@2x.png" alt=""></a>
+                        </li>
+                      <li>
+                            <div class="play_list_box">
+                                  <a href="#"><img src="../img/singer/img_7@2x.png" alt=""></a>
+                                  <a href="#"><p>李荣浩</p></a>
+                            </div>
+                            <a href="#"><img src="../img/singer/icon_1@2x.png" alt=""></a>
+                        </li>
+                  </ul>
+              </div>  
+    </div>
+</body>
+<script src="https://liutongbiao.github.io/js/zepto.js"></script>
+<script src="../js/fontsize.js"></script>
+<script>
+	$('.classsify_list_box > .classify_list').on("swipeLeft", function (e) {
+		var lefto = (-1.2) + 'rem';
+		$('.classsify_list_box > .classify_list > ul').animate({left: lefto}, 1000);
+    });
+    $('.classsify_list_box > .classify_list').on("swipeRight", function (e) {
+		var left = (0) + 'rem';
+		$('.classsify_list_box > .classify_list > ul').animate({
+			'left': left
+		}, 1000);
+	});
+</script>
+
+</html>

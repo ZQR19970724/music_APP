@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全部歌曲</title>
+    <link rel="shortcut icon" href="https://imgessl.kugou.com/uploadpic/softhead/240/20190520/20190520193625210.jpg">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/recent_play.css">
+</head>
+
+<body>
+    <div class="status"><img src="../img/MV/首页状态栏@2x.png" alt=""></div>
+    <div class="content">
+        <nav>
+            <a href="javascript:history.go(-1)"><img src="../img/MV/nav_icon_1@2x.png" alt=""></a>
+            <a href="#">
+                <p>全部歌曲</p>
+            </a>
+            <a href="#"><img src="../img/recent_play/nav_icon_1@2x.png" alt=""></a>
+        </nav>
+        <div class="plan">
+            <!-- single单曲 -->
+        <div class="single">
+            <div class="play">
+                <a href="#"><img src="../img/recent_play/icon_2@2x.png" alt=""></p></a>
+                <a href="#">
+                    <p>全部播放</p>
+                </a>
+                <a href="#"><span>(共10首)</span></a>
+            </div>
+
+
+            <div class="song_list">
+            <ul>
+           
+            </ul>
+        </div>
+        
+    </div>
+    </div>
+    <audio src="https://v1.itooi.cn/netease/url?id=1374051000&quality=flac" controls></audio id="audio">
+</body>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/fontsize.js"></script>
+<script src="../js/touch.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</html>
+
+<!-- 169185,1374061028,417859631,1374051000 -->
+<script>
+    let num = [1345848098,1374061028,417859631,1374051000,1234566,489302]
+        $.ajax({
+            url:"https://v1.itooi.cn/netease/song?id=1345848098,1374061028,417859631,1374051000,1234566,489302",
+            dataType:"json",
+            success:function(data){
+                var datas=data.data.songs;
+                var str='';
+                for(var i=0;i<datas.length;i++){
+                    str+="<li>";
+                    str+='<div class="left">';
+                    str+='<a href="#">';
+                    str+='<p>'+datas[i].name+'</p>'
+                    str+="  </a>";
+                    str+=' <a href="#">';
+                    str+='<span>SQ</span><span>'+datas[i].ar[0].name+'</span>';
+                    str+="   </a>";
+                    str+="   </div>";
+                    str+="  <p>04:46</p>";
+                    str+="  </li>";
+                }
+                console.log(datas)
+                $(".song_list>ul").html(str);
+                $('.song_list>ul>li').on("tap",function(){
+                    let index = $(this).index();
+                    console.log($('audio'))
+                    $('audio').attr('src','https://v1.itooi.cn/netease/url?id='+num[index]+'&quality=flac')
+                })
+                
+            }
+        })
+    </script>

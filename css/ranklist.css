@@ -1,0 +1,236 @@
+.content{
+    width: 100%;
+    padding:0rem 0.12rem;
+    box-sizing: border-box;
+}
+.content>.download{
+    width: 100%;
+    padding:0.17rem 0rem 0.21rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.content>.download>a>#img{
+    width: 0.08rem;
+    height: 0.14rem;
+}
+.content>.download>span{
+    color:rgb(241,241,241);
+    font-size:0.18rem;
+    font-family: "苹方粗体";
+}
+.content>.download>a>img:last-child{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+
+.content>.box,
+.content>.box1,
+.content>.box2{
+    width: 100%;
+    border-radius:0.1rem; 
+    padding-left: 0.17rem;
+    box-sizing: border-box;
+    margin-bottom:0.24rem;
+    background-color: rgb(255,255,255);
+    box-shadow: 0rem 18px 1px #D1D2D5,
+    0 36px 1px #8D8F96;
+}
+
+
+.content>.box1{
+    display: none;
+}
+.content>.box2{
+    display: none;
+}
+.content>.box>h1,
+.content>.box1>h1,
+.content>.box2>h1{
+    width: 100%;
+    font-family: "苹方粗体";
+    font-size: 0.15rem;
+    color:rgb(51,51,51);
+    padding:0.11rem 0rem 0.11rem 0rem;
+}
+.content>.box>ul,
+.content>.box1>ul,
+.content>.box2>ul{
+    width: 100%;
+    margin-bottom:0.15rem;
+}
+.content>.box>ul>li,
+.content>.box1>ul>li,
+.content>.box2>ul>li{
+    width: 100%;
+    height: 0.9rem;
+    display: flex;
+    padding-bottom: 0.36rem;
+    flex-direction: row;
+}
+.content>.box>ul>li>.left,
+.content>.box1>ul>li>.left,
+.content>.box2>ul>li>.left
+{
+    background: url("../img/ranklist/img-1@2x.png") no-repeat;
+    width: 1.2rem;
+    background-size: 100%;
+    height: 0.92rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content>.box>ul>li:nth-of-type(2)>.left{
+    background: url("../img/ranklist/img-2@2x.png") no-repeat;
+}
+.content>.box1>ul>li:nth-of-type(2)>.left{
+    background: url("../img/ranklist/img-4@2x.png") no-repeat;
+}
+.content>.box2>ul>li:nth-of-type(2)>.left{
+    background: url("../img/ranklist/img-7@2x.png") no-repeat;
+}
+.content>.box>ul>li:nth-of-type(3)>.left{
+    background: url("../img/ranklist/img-3@2x.png") no-repeat;
+}
+.content>.box1>ul>li:nth-of-type(3)>.left{
+    background: url("../img/ranklist/img-5@2x.png") no-repeat;
+}
+.content>.box2>ul>li:nth-of-type(3)>.left{
+    background: url("../img/ranklist/img-8@2x.png") no-repeat;
+}
+.content>.box>ul>li:nth-of-type(4)>.left{
+    background: url("../img/ranklist/img-4@2x.png") no-repeat;
+}
+.content>.box1>ul>li:nth-of-type(4)>.left{
+    background: url("../img/ranklist/img-6@2x.png") no-repeat;
+}
+.content>.box2>ul>li:nth-of-type(4)>.left{
+    background: url("../img/ranklist/img-9@2x.png") no-repeat;
+}
+
+.content>.box>ul>li>.left>.img,
+.content>.box1>ul>li>.left>.img,
+.content>.box2>ul>li>.left>.img{
+    height: 0.92rem;
+    margin-right:0.14rem;
+}
+.content>.box>ul>li>.left>.img_img,
+.content>.box1>ul>li>.left>.img_img,
+.content>.box2>ul>li>.left>.img_img{
+    width: 1.2rem;
+    height:1rem;
+    background-color: #000;
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.content>.box>ul>li>.left>span{
+    font-size: 0.18rem;
+    color:rgb(255,255,255);
+    font-family:"苹方粗体";
+    position: absolute;
+    left: 0.2rem;
+    top:0.28rem;
+}
+.content>.box1>ul>li>.left>span{
+    font-size: 0.18rem;
+    color:rgb(255,255,255);
+    font-family:"苹方粗体";
+    position: absolute;
+    /* left: 0.2rem; */
+    top:0.28rem;
+}
+.content>.box2>ul>li>.left>span{
+    font-size: 0.18rem;
+    color:rgb(255,255,255);
+    font-family:"苹方粗体";
+    position: absolute;
+    left: 0.2rem;
+    top:0.28rem;
+}
+
+.content>.box>ul>li:nth-of-type(2)>.left>span{
+    position: absolute;
+    left: 0.38rem;
+    top:0.28rem;
+}
+.content>.box1>ul>li:nth-of-type(2)>.left>span{
+    position: absolute;
+    /* left: 0.38rem; */
+    top:0.28rem;
+}
+.content>.box2>ul>li:nth-of-type(2)>.left>span{
+    position: absolute;
+    left: 0.3rem;
+    top:0.28rem;
+}
+
+.content>.box>ul>li:nth-of-type(3)>.left>span{
+    position: absolute;
+    left: 0.38rem;
+    top:0.28rem;
+}
+.content>.box1>ul>li:nth-of-type(3)>.left>span{
+    position: absolute;
+    /* left: 0.38rem; */
+    top:0.28rem;
+}
+.content>.box2>ul>li:nth-of-type(3)>.left>span{
+    position: absolute;
+    left: 0.3rem;
+    top:0.28rem;
+}
+
+.content>.box>ul>li:nth-of-type(4)>.left>span{
+    position: absolute;
+    left: 0.38rem;
+    top:0.28rem;
+}
+.content>.box1>ul>li:nth-of-type(4)>.left>span{
+    position: absolute;
+    /* left: 0.38rem; */
+    top:0.28rem;
+}
+.content>.box2>ul>li:nth-of-type(4)>.left>span{
+    position: absolute;
+    left: 0.3rem;
+    top:0.28rem;
+}
+.content>.box>ul>li>.left>p>img,
+.content>.box1>ul>li>.left>p>img,
+.content>.box2>ul>li>.left>p>img{
+    width: 0.22rem;
+    height: 0.22rem;
+    position: absolute;
+    left: 0rem;
+    bottom:0.12rem;
+}
+.content>.box>ul>li>.left>p>span,
+.content>.box1>ul>li>.left>p>span,
+.content>.box2>ul>li>.left>p>span{
+    color:rgb(255,255,255);
+    font-family: "平凡中等";
+    font-size: 0.1rem;
+    position: absolute;
+    left: 0.27rem;
+    bottom:0.15rem;
+}
+.content>.box>ul>li>.right,
+.content>.box1>ul>li>.right,
+.content>.box2>ul>li>.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content>.box>ul>li>.right>p,
+.content>.box1>ul>li>.right>p,
+.content>.box2>ul>li>.right>p{
+flex-flow: "苹方中等";
+color:rgb(51,51,51);
+font-size: 0.12rem;
+padding:0.08rem 0.14rem;
+}

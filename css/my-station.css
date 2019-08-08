@@ -1,0 +1,136 @@
+
+
+.song-list{
+    padding: 0 0.12rem;
+    width: 100%;
+    /*border: red solid 1px;*/
+    box-sizing: border-box;
+}
+.song-list > nav{
+    padding: 0.14rem 0 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.song-list > nav > a > img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.song-list > nav > a > p{
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+.search{
+    width: 100%;
+    margin-top: 0.1rem;
+    font-size: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.search>img:first-of-type{
+    width: 0.225rem;
+    height: 0.19rem;
+    margin-right: 0.08rem;
+}
+.search>a>input{
+    width: 3.5rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    font-size: 0.12rem;
+    border-radius: 0.25rem;
+    text-indent: 0.53rem;
+    border: none;
+    outline: none;
+    background:url("../img/icon-3@2x.png") no-repeat 0.165rem 0.07rem rgb(88,90,101);
+    background-size: 0.22rem 0.22rem;
+}
+.search>img:last-of-type{
+    width: 0.25rem;
+    height: 0.23rem;
+    margin-left: 0.07rem;
+}
+.take>div{
+    margin-top: 0.11rem;
+}
+.take>div>span{
+    font-size: 0.14rem;
+    padding: 0.12rem ;
+    color: #f1f1f1;
+}
+.left>img{
+    width: 0.66rem;
+    height:0.66rem;
+}
+.take-station{
+    /*margin-top: 0.12rem;*/
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+    align-items: center;
+    padding: 0.12rem 0.12rem;
+}
+.right>p{
+    padding: 0.03rem 0.1rem ;
+}
+.right>p:nth-child(1){
+    font-size: 0.15rem;
+    color:rgb(241,241,241);
+}
+.gary{
+    color: rgb(153,153,153);
+    font-size: 0.12rem;
+}
+.strip{
+    width: 100%;
+    height: 0.12rem;
+    background: rgb(45,34,55);
+    margin-top: -0.05rem;
+}
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 0.1rem;*/
+}
+.list>li{
+    /*display: flex;*/
+    text-align: center;
+
+}
+.list>li>p{
+    font-size:0.12rem;
+    color:rgb(241,241,241)
+}
+.list>li>img{
+    width: 1.13rem;
+    height: 1.13rem;
+}
+.replace{
+    margin-top: 0.29rem;
+    height: 0.195rem;
+    /*margin: 0 auto;*/
+    text-align: center;
+    position: relative;
+
+}
+.replace>img{
+    margin-top: 0.1rem;
+    width: 0.235rem;
+    height: 0.195rem;
+}
+.replace>span{
+    font-family: "苹方 粗体";
+    font-size: 0.12rem;
+    color:rgb(170,64,178);
+    line-height: 0.195rem;
+
+}
+/* footer{
+    margin-bottom: 0.43rem;
+} */

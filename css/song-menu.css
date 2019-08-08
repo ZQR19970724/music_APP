@@ -1,0 +1,210 @@
+.song-list{
+    padding: 0 0.12rem;
+    width: 100%;
+    /*border: red solid 1px;*/
+    box-sizing: border-box;
+}
+.song-list > nav{
+    padding: 0.14rem 0 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.song-list > nav > a > img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.song-list > nav > a > p{
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+.hot{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.1rem 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*box-sizing: border-box;*/
+}
+.hot a img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.hot a {
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+.box{
+     width:2.5rem;
+     height: 1.5rem;
+     margin: 0.155rem auto;
+     border-radius: 10px;
+ }
+.box ul{
+    position: relative;
+}
+.box ul li{
+    width:2.5rem;
+    height: 1.5rem;
+}
+.box ul li:nth-child(1){
+    /*margin-top: -0.02rem;*/
+    z-index: +999;
+}
+.box ul li:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.box ul li:nth-child(3){
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.box li img{
+    width: 100%;
+    height: 100%;
+}
+.list {
+    width: 2.4rem;
+    height: 0.5rem;
+    /*border: 1px solid red;*/
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    /*top: 10px;*/
+    /*left: 27px;*/
+    padding: 0px 5px 1px 1px;
+}
+.list li {
+    width: 0.75rem;
+    height: 0.5rem;
+    float:right;
+    display: inline-block;
+    padding: 5px 0;
+}
+.fenlei{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.1rem 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*box-sizing: border-box;*/
+}
+.fenlei p{
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+.clas{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.1rem 0.45rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clas>ul>li{
+    width: 0.48rem;
+    height: 0.25rem;
+    background: #cc43d7;
+    text-align: center;
+    line-height: 0.25rem;
+    margin-top: 0.1rem;
+    border-radius: 5px;
+}
+.clas>ul>li>a {
+    font-size:0.13rem;
+}
+.find-1{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.1rem 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.35rem;
+}
+.find-1 a img{
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.find-1 a {
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+.sort{
+    margin-top: .14rem;
+    width: 100%;
+    /*display: flex;*/
+}
+.special-1{
+    width: 100%;
+    padding: 0 0.12rem;
+    box-sizing: border-box;;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .special-1 p {
+    margin-top: 0.08rem;
+    margin-bottom: 0.12rem;
+    font-size: 0.12rem;
+    color: #f1f1f1;
+}
+
+
+/* .special-1 p{
+    margin-top: 0.08rem;
+    margin-bottom: 0.12rem;
+} */
+ /*.swiper-container {*/
+    /*width: 95%;*/
+    /*padding-top: 0.5rem;*/
+/*}*/
+ /*.swiper-slide {*/
+    /*background-position: center;*/
+    /*background-size: 130% 120%;*/
+    /*width: 60%;*/
+    /*!*height: 15rem;*!*/
+/*}*/
+ /*.swiper-slide img {*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*!*height: 15rem;*!*/
+/*}*/
+/*.swiper-container {*/
+    /*width: 2.04rem;*/
+    /*height: 1.37rem;*/
+    /*padding: 0.5rem;*/
+/*}*/
+/*.swiper-slide {*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*width: 2.04rem;*/
+    /*height: 1.37rem;*/
+/*}*/
+ .swiper-container {
+    width: 95%;
+    padding-top: 0.5rem;
+}
+ .swiper-slide {
+    background-position: center;
+    background-size: 130% 120%;
+    width: 60%;
+    /*height: 15rem;*/
+}
+ .swiper-slide img {
+    display: block;
+    width: 100%;
+    /*height: 15rem;*/
+}

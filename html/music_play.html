@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://imgessl.kugou.com/uploadpic/softhead/240/20190520/20190520193625210.jpg">
+    <link rel="stylesheet" href="../css/public.css">
+    <title>music_play</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            width: 100%;
+            padding: 0rem 0.12rem;
+            box-sizing: border-box;
+        }
+
+        /* .search {
+            width: 100%;
+            margin-top: 0.1rem;
+            font-size: 0rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search>#pic{
+            width: 0.08rem;
+            height: 0.14rem;
+            margin-right: 0.08rem;
+        }
+
+        .search>a>img:last-of-type {
+            width: 0.27rem;
+            height: 0.07rem;
+            margin-left: 0.07rem;
+        } */
+
+        .search {
+            width: 100%;
+            margin-top: 0.1rem;
+            font-size: 0rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search>a>img{
+            width: 0.08rem;
+            height: 0.14rem;
+            margin-right: 0.08rem;
+        }
+
+        .search>img:last-of-type {
+            width: 0.27rem;
+            height: 0.07rem;
+            margin-left: 0.07rem;
+        }
+
+
+        .box {
+            width: 100%;
+            margin: 0.915rem auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+        }
+
+        /* 
+        .cir {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: 5px solid #ccc;
+            position: absolute;
+            left: 0.55rem;
+            top: 1.04rem;
+        } */
+
+        .box>img:first-of-type {
+            width: 1.965rem;
+            height: 1.965rem;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+
+        .box>img:nth-of-type(2) {
+            position: absolute;
+            left: 0.28rem;
+            width: 0.185rem;
+            height: 0.21rem;
+        }
+
+        .box>img:nth-of-type(3) {
+            position: absolute;
+            right: 0.28rem;
+            width: 0.185rem;
+            height: 0.21rem;
+        }
+
+        .box>.play {
+            position: absolute;
+            right: 1.8rem;
+            width: 0.185rem;
+            height: 0.21rem;
+        }
+
+        .box>.play>img:nth-of-type(1) {
+            position: absolute;
+            width: 0.185rem;
+            height: 0.21rem;
+            display: none;
+        }
+
+        .box>.play>img:nth-of-type(2) {
+            position: absolute;
+            width: 0.185rem;
+            height: 0.21rem;
+        }
+
+        p {
+            margin-top: 0.675rem;
+            width: 100%;
+            display: flex;
+            font-size: 0rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p>span {
+            font-family: "苹方";
+            color: rgb(241, 241, 241);
+        }
+
+        p>span:first-of-type {
+            font-size: 0.3rem;
+        }
+
+        p>span:last-of-type {
+            font-size: 0.15rem;
+        }
+
+        .clume {
+            width: 100%;
+            margin-top: 0.54rem;
+            padding: 0 0.5rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .clume>.progress {
+            width: 2.25rem;
+            height: 0.04rem;
+            margin-right: 0.1rem;
+            background-color: rgb(206, 206, 206);
+            position: relative;
+        }
+
+        .clume>.progress>.now_progress {
+            width: 0rem;
+            height: 0.04rem;
+            background-color: rgb(255, 241, 0);
+        }
+
+        .clume>.progress>.cir_progress {
+            width: 0.1rem;
+            height: 0.1rem;
+            border-radius: 50%;
+            background-color: rgb(255, 241, 0);
+            position: absolute;
+            left: 0rem;
+            top: -0.03rem;
+            box-shadow: 2px 0px 5px 3px rgb(255, 241, 0);
+        }
+
+        .bottom {
+            width: 100%;
+            font-size: 0rem;
+            /* margin-top:0.18rem; */
+            padding: 0.5rem 0.5rem 0rem 0.5rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bottom>img {
+            width: 0.235rem;
+            height: 0.225rem;
+        }
+
+        .box>img:nth-of-type(4) {
+            position: absolute;
+            left: 0.6rem;
+            width: 2.475rem;
+            height: 2.415rem;
+            z-index: 0;
+        }
+
+        .clume_1 {
+            position: absolute;
+            right: 0.6rem;
+            bottom: 0.9rem;
+            display: none;
+            width: 0.04rem;
+            height: 1rem;
+        }
+
+        .clume_1>.progress {
+            width: 0.04rem;
+            height: 1rem;
+            background-color: rgb(206, 206, 206);
+            transform: rotate(-180deg);
+            /* position: absolute; */
+            /* bottom:0rem; */
+        }
+
+        .clume_1>.progress>.now_progress {
+            width: 0.04rem;
+            height: 0.4rem;
+            background-color: rgb(255, 241, 0);
+                  }
+
+        .clume_1>.progress>.cir_progress {
+            width: 0.1rem;
+            height: 0.1rem;
+            border-radius: 50%;
+            background-color: rgb(255, 241, 0);
+            box-shadow: 2px 0px 5px 3px rgb(255, 241, 0);
+            position: absolute;
+            top: 0.4rem;
+            left: -0.04rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="status">
+        <img src="../img/status.png" alt="">
+    </div>
+    <div class="content">
+        <div class="search">
+            <a href="javascript:history.go(-1)">
+                <img src="../img/music_play/icon-1@2x.png" alt="">
+            </a>
+            <img src="../img/music_play/icon-2@2x.png" alt="">
+        </div>
+    </div>
+    <div class="cir"></div>
+    <div class="box">
+        <img src="../img/music_play/img-1@2x.png" alt="">
+        <img src="../img/music_play/icon-3@2x.png" alt="">
+        <img src="../img/music_play/icon-4@2x.png" alt="">
+        <img src="../img/music_play/椭圆2@2x.png" alt="">
+        <div class="play">
+            <img src="../img/music_play/icon-01@2x.png" alt="">
+            <img src="../img/music_play/icon@2x.png" alt="">
+        </div>
+    </div>
+
+    <p>
+        <span>绅士</span>
+        <span>薛之谦</span>
+    </p>
+
+    <div class="clume">
+        <div class="progress">
+            <div class="now_progress"></div>
+            <div class="cir_progress"></div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <img src="../img/music_play/icon-6@2x.png" alt="">
+        <img src="../img/music_play/icon-7@2x.png" alt="">
+        <img src="../img/music_play/icon-8@2x.png" alt="">
+        <img src="../img/music_play/icon-5@2x.png" alt="">
+    </div>
+
+    <div class="clume_1">
+        <div class="progress">
+            <div class="now_progress"></div>
+            <div class="cir_progress"></div>
+        </div>
+    </div>
+
+    <audio></audio>
+</body>
+
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/fontsize.js"></script>
+<script>
+    // var music=localStorage.getItem('list')?JSON.parse(localStorage.getItem('list')):[];
+    // console.log(music);
+    var music = [{
+        sing: "薛之谦",
+        song: "意外",
+        pic_url: "https://y.gtimg.cn/music/photo_new/T002R300x300M000000QgFcm0v8WaF.jpg?max_age=2592000",
+        src: "http://fs.open.kugou.com/a90764155730da6b3b8f2f8981e7bd92/5d4c405d/G010/M07/1D/03/qoYBAFUJw4uAYCPrAEZMtzCkT50885.mp3",
+    }, {
+        sing: "薛之谦",
+        song: "慢半拍",
+        pic_url: "https://y.gtimg.cn/music/photo_new/T002R300x300M000003y8dsH2wBHlo.jpg?max_age=2592000",
+        src: "http://fs.open.kugou.com/8f38d38e4e23918067c737ddcbbbcd67/5d4c3e38/G165/M03/1C/03/5Q0DAF0tqTyAXsggADsDHG3hQcg128.mp3",
+    },{ 
+        sing: "薛之谦",
+        song: "丑八怪",
+        pic_url: "https://p3fx.kgimg.com/stdmusic/20160718/20160718092740664264.jpg",
+        src: "http://fs.open.kugou.com/a5229c6acf5285f8bcf68c5697e0f3a1/5d4c4147/G137/M03/17/1D/aZQEAFt-jsuAFmXqAD2w54GV4Z0351.mp3",
+    }
+    ];
+
+    var audio = document.querySelector("audio");
+    var start = document.querySelector(".box>.play>img:nth-of-type(2)");
+    var stop = document.querySelector(".box>.play>img:nth-of-type(1)");
+    var img_pic = document.querySelector(".box>img:nth-of-type(1)");
+    var span_song = document.querySelector("p>span:nth-of-type(1)");
+    var span_sing = document.querySelector("p>span:nth-of-type(2)");
+    var next = document.querySelector(".box>img:nth-of-type(3)");
+    var prev = document.querySelector(".box>img:nth-of-type(2)");
+    var play_ = document.querySelector(".play");
+    var progress = document.querySelector(".clume .progress");
+    var now_progress = document.querySelector(".clume .now_progress");
+    var cir_progress = document.querySelector(".clume .cir_progress");
+    var img = document.querySelector(".bottom>img:last-of-type");
+    var clume_ = document.querySelector(".clume_1");
+    var clume = document.querySelector(".clume_1>.progress");
+    var clume_clume1 = document.querySelector(".clume_1 .now_progress");
+    var clume_clume2 = document.querySelector(".clume_1 .cir_progress");
+
+    var index = 0;
+    var timer = null;
+    var rotatedeg;
+    play_.onclick = function () {
+        if (audio.paused) {
+            playMusic();
+        } else {
+            stopMusic();
+        }
+    }
+    next.onclick = function () {
+        index++;
+        init();
+        playMusic();
+    }
+    prev.onclick = function () {
+        index--;
+        init();
+        playMusic();
+    }
+    init();
+    function init() {
+        index = index > music.length - 1 ? 0 : index;
+        index = index < 0 ? music.length - 1 : index;
+        audio.src = music[index].src;
+        span_song.innerHTML = music[index].song;
+        span_sing.innerHTML = music[index].sing;
+        img_pic.src = music[index].pic_url;
+    }
+    function playMusic() {
+        rotatedeg = 0;
+        stop.style.display = "block";
+        start.style.display = "none";
+        audio.play();
+        clearInterval(timer);
+        timer = setInterval(function () {
+            rotatedeg++;
+            img_pic.style.transform = "rotate(" + rotatedeg + "deg)";
+        }, 30)
+    }
+    function stopMusic() {
+        clearInterval(timer);
+        stop.style.display = "none";
+        start.style.display = "block";
+        audio.pause();
+    }
+
+    clume.onclick = function (e) {
+        audio.volume = e.offsetY / clume.offsetHeight * 1;
+        clume_clume1.style.height = e.offsetY + "px";
+        clume_clume2.style.top = e.offsetY + "px";
+    };
+
+    img.onclick = function () {
+        clume_.style.display = "block";
+        clume_.style.transtion = "all 1s";
+    };  
+var totalT;
+    audio.oncanplay = function () {
+        totalT = audio.duration;
+        // var min = formateTime(parseInt(totalT / 60));
+        // var sec = formateTime(parseInt(totalT % 60));
+        audio.ontimeupdate = function () {
+            var currentT = audio.currentTime;
+            // var min = formateTime(parseInt(currentT / 60));
+            // var sec = formateTime(parseInt(currentT % 60));
+            //音乐进度
+            var left = currentT / totalT * progress.offsetWidth;
+            cir_progress.style.left = left + "px";
+            now_progress.style.width = left + "px";
+        };
+    };
+    progress.onclick = function (e) {
+        audio.currentTime = e.offsetX / progress.offsetWidth * totalT;
+    };
+</script>

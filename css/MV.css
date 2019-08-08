@@ -1,0 +1,130 @@
+.content {
+    padding: 0 0.12rem;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.content>nav {
+    padding: 0.14rem 0 0.12rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content>nav>a>img {
+    width: 0.22rem;
+    height: 0.22rem;
+}
+
+.content>nav>a>p {
+    font-family: "苹方粗体";
+    font-size: 0.18rem;
+    color: #f1f1f1;
+}
+
+.content>.search {
+    padding: 0.12rem 0 0.16rem 0;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.content>.search> a >img {
+    width: 0.22rem;
+    height: 0.22rem;
+    padding: 0.04rem 0;
+    position: absolute;
+    margin-left: 0.24rem;
+}
+.content>.search>a>input {
+    width: 3.5rem;
+    height: 0.3rem;
+    text-indent: 0.53rem;
+    border: none;
+    outline: none;
+    border-radius: 0.15rem; 
+    background: #585a65;
+    color: #999;
+    font-size: 0.14rem;
+    font-family: "苹方 中等";
+}
+.content>.choiceness_mv{
+   
+    box-sizing: border-box;
+
+}
+.content>.choiceness_mv>a{
+    font-family: "苹方粗体";
+    font-size: 0.16rem;
+    display: block;
+    color: #e1e1e1;
+    padding-bottom: 0.16rem; 
+}
+.content>.choiceness_mv>ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content>.choiceness_mv>ul>li{
+    width: 1.7rem;
+}
+.content>.choiceness_mv>ul>li>a>img{
+    width: 100%;
+}
+.content>.choiceness_mv>ul>li>a>p{
+    font-family: "苹方 中等";
+    font-size: 0.13rem;
+    color: #f1f1f1;
+    padding: 0.08rem 0;
+
+}
+.content>.choiceness_mv>ul>li>a>span{
+    font-family: "苹方 中等";
+    display: block;
+    font-size: 0.115rem;
+    color: #999;
+    padding-bottom: 0.12rem;
+}
+.ranking_list{
+    box-sizing: border-box;
+}
+.ranking_list > a{
+    font-family: "苹方粗体";
+    font-size: 0.16rem;
+    display: block;
+    color: #e1e1e1;
+    padding: 0.12rem 0;
+}
+.ranking_list>ul>li>a>img{
+    width: 100%;
+}
+.ranking_list>ul>li>.main{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 0.12rem 0;
+}
+.ranking_list>ul>li>.main>a>p{
+    font-family: "苹方粗体";
+    font-size: 0.24rem;
+    color: #aa40b2;
+}
+.ranking_list>ul>li>.main>.ranking_list_right{
+    margin-left: 0.16rem;
+}
+.ranking_list>ul>li>.main>.ranking_list_right>a>p{
+    font-family: "苹方中等";
+    font-size: 0.13rem;
+    color: #f1f1f1;
+    padding-bottom: 0.08rem;
+}
+.ranking_list>ul>li>.main>.ranking_list_right>a>span{
+    font-family: "苹方中等";
+    font-size: 0.11rem;
+    color: #999;
+    /* display: block; */
+    
+}

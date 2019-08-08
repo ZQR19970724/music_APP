@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>introduction</title>
+    <link rel="shortcut icon" href="https://imgessl.kugou.com/uploadpic/softhead/240/20190520/20190520193625210.jpg">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/introduction.css">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img/introduction//img@2x.png" alt="">
+                <a href="../html/login.html">跳过<img src="../img/introduction/icon@2x.png" alt="">
+                </a>
+                <div class="img">
+                    <img src="../img/introduction/logo@2x.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="../img/introduction/img-2@2x.png" alt="">
+                <a href="../html/login.html">跳过<img src="../img/introduction/icon@2x.png" alt="">
+                </a>
+                <div class="img">
+                    <img src="../img/introduction/logo@2x.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="../img//introduction/img-3@2x.png" alt="">
+                <div class="img">
+                    <img src="../img/introduction/logo@2x.png" alt="">
+                </div>
+                <button>立即体验</button>
+            </div>
+
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+</body>
+
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/fontsize.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/touch.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: false,
+        speed: 100,
+        grabCursor: true,
+        // autoplay: {
+        //     delay: 3000,
+        // },
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        lazy: {
+            loadPrevNext: true,
+        },
+    });
+
+    $("button").tap(function () {
+        window.location.href="../html/login.html";
+    })
+</script>
